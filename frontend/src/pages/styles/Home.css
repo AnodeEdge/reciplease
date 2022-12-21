@@ -3,10 +3,8 @@ body, html {
 }
 
 .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../assets/hero_bg.jpg");
-
-  /* Set a specific height */
-  height: 50%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.350), rgba(0, 0, 0, 0.350)), url("../../assets/hero_bg.jpg");
+  height: 90vh;
 
   /* Position and center the image to scale nicely on all screens */
   background-position: center;
@@ -22,5 +20,9 @@ body, html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+.card-wrapper {
+  height: 60vh;
 }
