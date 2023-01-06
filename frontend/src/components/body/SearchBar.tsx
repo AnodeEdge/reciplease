@@ -5,16 +5,17 @@ import '../styles/SearchBar.css'
 
 
 interface Props {
-    setSearchQuery: React.Dispatch<React.SetStateAction<{}>>
+    setSearchQuery: Function
+    handleSearch: Function
 }
 
 const faPropIcon = FontAwesomeIcon
 
-const SearchBar: React.FC<Props> = ({ setSearchQuery }: any) => {
+const SearchBar: React.FC<Props> = ({ setSearchQuery, handleSearch }: any) => {
     
     return (
         <>
-            <form className="wrapper">
+            <form className="wrapper" onSubmit={(evt: React.FormEvent) => handleSearch(evt)}>
                 <div className="label">Search through countless international recipes</div>
                 <div className="searchBar">
                     <input
@@ -22,7 +23,7 @@ const SearchBar: React.FC<Props> = ({ setSearchQuery }: any) => {
                         type="text"
                         name="searchQueryInput"
                         placeholder="Recipe Search"
-                        onChange={(evt) => setSearchQuery(evt.target.value)}
+                        onChange={(evt) => setSearchQuery({q: evt.target.value})}
                     />
                     <button
                         id="searchQuerySubmit"
