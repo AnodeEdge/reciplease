@@ -1,5 +1,5 @@
 import React from 'react'
-import "../styles/Footer.css"
+import "./Footer.css"
 
 
 const Footer = () => {
@@ -17,17 +17,17 @@ const Footer = () => {
         </div>
         <div className="footer-right col-md-4 col-sm-6">
           <h2> Recip<span>!</span>ease</h2>
-          <p className="menu">
+          <div className="menu">
             <div>
               <a href="https://www.scott-curtis.com"> Personal Website</a>
             </div>
             <div>
-              <a href="">LinkedIn</a>
+              {/* <a href="">LinkedIn</a> */}
             </div>
             <div>
-              <a href="">GitHub</a>
+              {/* <a href="">GitHub</a> */}
             </div>
-          </p>
+          </div>
           <p className="name"> Scott Curtis &copy; 2023</p>
         </div>
       </footer>

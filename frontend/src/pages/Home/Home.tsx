@@ -1,10 +1,9 @@
 import React from 'react'
-import InfoCard from '../components/body/InfoCard'
-import '../pages/styles/Home.css'
+import InfoCard from './components/InfoCard'
+import './Home.css'
 import { faUtensils, faBurger, faPizzaSlice, } from '@fortawesome/free-solid-svg-icons'
-import Footer from '../components/footer/Footer'
-import { url } from 'inspector'
-
+import Footer from '../../shared-components/footer/Footer'
+// import { url } from 'inspector'
 
 const Home = () => {
   return (

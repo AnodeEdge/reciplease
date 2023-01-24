@@ -6,11 +6,11 @@ import '../styles/Cards.css'
 interface Props {
   cardData: any[];
   cardType?: string;
-  updateSearchFilters: any;
+  handleFilterClick?: any
 }
 
 
-const FilterCardWrapper: React.FC<Props> = ({ cardData, cardType, updateSearchFilters,  }) => {
+const FilterCardWrapper: React.FC<Props> = ({ cardData, cardType, handleFilterClick,  }) => {
   return (
     <>
       <div className='card-wrapper' key={cardType} id={cardType}>
@@ -21,7 +21,7 @@ const FilterCardWrapper: React.FC<Props> = ({ cardData, cardType, updateSearchFi
               title={data.title}
               imgSource={data.imgSource}
               filterValue={data.filterValue}
-              updateSearchFilters={updateSearchFilters}
+              handleFilterClick={handleFilterClick}
             />
 
           )

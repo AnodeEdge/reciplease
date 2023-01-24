@@ -7,11 +7,11 @@ interface Props {
     filterValue: string[] | string;
     imgSource?: string;
     alt?: string;
-    updateSearchFilters: any;
+    handleFilterClick: any;
 
 }
 
-const FilterCard: React.FC<Props> = ({ title, imgSource, alt, type, filterValue, updateSearchFilters }) => {
+const FilterCard: React.FC<Props> = ({ title, imgSource, alt, type, filterValue, handleFilterClick }) => {
 
     const generateKey = (): string => {
         return (typeof (filterValue) === 'string')
@@ -29,8 +29,8 @@ const FilterCard: React.FC<Props> = ({ title, imgSource, alt, type, filterValue,
         <div className="card"
             key={generateKey()}
             id={generateKey()}
-            // onClick={handleClick}
-            >
+            onClick={() => { handleFilterClick({ [type]: filterValue }) }}
+        >
             <img src={imgSource} alt={alt} />
             <div className="container">
                 <h4><b>{title}</b></h4>

@@ -8,8 +8,8 @@ interface Meal {
 export const mealsOfTheDay: Meal[] = [
 {
     type: 'mealType',
-    filterValue: 'breakfest',
-    title: 'Breakfest',
+    filterValue: 'Breakfast',
+    title: 'Breakfast',
     imgSource: ''
 }, {
     type: 'mealType',

@@ -1,6 +1,8 @@
 const querystring = require("node:querystring")
 const fetch = require("node-fetch")
 const dotenv = require('dotenv');
+const _ = require('lodash')
+
 dotenv.config({ path: './.env' });
 
 edamamAccess = {
